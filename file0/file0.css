@@ -80,6 +80,7 @@ body {
     width: 100%;
     text-align: left;
   }
+  
   @media (max-width:1290px){
       .menu a{
           font-size: 14px;
@@ -103,9 +104,6 @@ body {
     .menu li {
       margin: 0;
       border-top: 1px solid #444;
-    }
-    .menu a {
-      padding: 15px;
     }
 
     /* Pour le sous-menu, on retire le positionnement absolu

@@ -8,7 +8,7 @@
           menu.style.display = "flex";
         }
       });
-  
+    
       // Gestion du clic sur "Services" pour afficher/cacher le sous-menu en mode mobile
       // On applique cet événement uniquement en mode mobile
       const serviceToggle = document.querySelector(".service-toggle");
