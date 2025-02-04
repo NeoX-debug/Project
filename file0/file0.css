@@ -1,0 +1,126 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* --- Barre de navigation --- */
+  nav {
+    background-color: #eb984e;
+    height: 130px;
+  }
+  nav img{
+    border-radius: 100px;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu li {
+    position: relative;
+    margin-top: -80px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .menu a:hover {
+    background-color: #dc7633;
+    border-radius: 30px;
+  }
+
+  /* --- Sous-menu (mode bureau) --- */
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ecf0f1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 150px;
+  }
+
+  .submenu li {
+    margin: 0;
+  }
+
+  .submenu a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Affichage du sous-menu au survol en mode bureau */
+  .menu li:hover .submenu {
+    display: block;
+  }
+
+  /* --- Menu mobile --- */
+  .menu-toggle {
+    display: none;
+    background-color: #eb984e;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  @media (max-width: 943px) {
+    nav img{
+      float: right;
+      margin-right: 40px;
+      margin-top: -20px;
+    }
+    /* On cache le menu par défaut */
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #eb984e;
+      width: 100%;
+    }
+    .menu li {
+      margin: 0;
+      border-top: 1px solid #444;
+    }
+    .menu a {
+      padding: 15px;
+    }
+
+    /* Pour le sous-menu, on retire le positionnement absolu
+       et on le cache par défaut */
+    .submenu {
+      position: relative;
+      width: 100%;
+      display: none;
+      border-top: 0px solid #555;
+    }
+    .submenu li {
+      margin: 0;
+    }
+
+    /* Classe qui affiche le sous-menu en mode mobile */
+    .submenu.show {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
