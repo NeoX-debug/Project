@@ -1,4 +1,3 @@
-
     // Gestion du bouton hamburger pour afficher/cacher le menu mobile
     document.querySelector(".menu-toggle").addEventListener("click", function() {
         const menu = document.querySelector(".menu");
@@ -23,30 +22,3 @@
           submenu.classList.toggle("show");
         }
       });
-      
-      document.addEventListener("DOMContentLoaded", function () {
-      const serviceToggle = document.querySelector(".service-toggle");
-      const submenu = serviceToggle.nextElementSibling;
-  
-      // Gestion du clic pour mobile
-      serviceToggle.addEventListener("click", function (e) {
-          // Vérifier si on est en mode mobile
-          if (window.innerWidth <= 768) {
-              e.preventDefault(); // Empêche le lien de s'activer
-              submenu.classList.toggle("show"); // Affiche ou cache le sous-menu
-          }
-      });
-  
-      // Gestion du survol pour PC
-      if (window.innerWidth > 768) {
-          const parentLi = serviceToggle.parentElement;
-  
-          parentLi.addEventListener("mouseenter", function () {
-              submenu.style.display = "block"; // Afficher le sous-menu
-          });
-  
-          parentLi.addEventListener("mouseleave", function () {
-              submenu.style.display = "none"; // Cacher le sous-menu
-          });
-      }
-  });
