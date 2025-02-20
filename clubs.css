@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%), url(images/club3.png);
+    background-size: cover;
 }
 /* Loader Styles */
 #loader {
@@ -145,6 +147,38 @@ header img {
     z-index: 1500;
 }
 
+.container{ margin-top: 100px; }
+.categorie{
+    width: 25%;
+    height: 170px;
+    background-color: #858484;
+    border: 2px solid #eb984e;
+    color: #eb984e;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    float: left;
+    margin-left: 15%;
+}
+.categorie img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.categorie p{
+    font-size: 130%;
+}
+.categorie span{
+    width: 55%;
+    float: right;
+    text-align: center;
+}
+.categorie a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.categorie a:hover{color: #eb984e;
+    transition: 0.3s;
+}
 
 /**adaptation pour les différents écrans*/
 /*@media apporte des changements qu'on spécifie à la page pour une largeur max ou min qu'on définit*/
@@ -161,9 +195,11 @@ header img {
 }
 @media (max-width: 875px) {
     .desktop-menu { display: none; }
-    .open-btn { display: block; }
-    .overlay{display: none;}
-    header img{ margin-left: 75%;}
+    .open-btn {
+        display: block;
+     }
+     .overlay{display: none;}
+     header img{ margin-left: 75%;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

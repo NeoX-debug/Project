@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="dept-en.css">
+    <link rel="stylesheet" href="acceuil.css">
     <link rel="icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dept-EN</title>
+    <title>Acceuil</title>
 </head>
 <body>
-    
-<!-- Loader -->
-<div id="loader">
-    <div class="spinner">
-        <img src="images/logo.png" class="loader-image" height="150px" width="150px" alt=""></div>
-</div>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner">
+            <img src="images/logo.png" class="loader-image" height="150px" width="150px" alt=""></div>
+    </div>
+
 
     <header>
         <img src="images/logo.png" alt="Logo Lycée Bilingue d'Ekounou">
         <div class="desktop-menu" id="desktop-menu">
-            <a href="acceuil.html">Accueil</a>
+            <a href="#" id="onglet">Accueil</a>
             <div>
-                <a href="#" id="onglet">Départements ▼</a>
+                <a href="#">Départements ▼</a>
                 <div class="submenu">
                     <a href="dept-info.html">Informatique</a>
                     <a href="#">Mathématiques</a>
                     <a href="dept-pct.html">PCT</a>
                     <a href="dept-fr.html">Français</a>
-                    <a href="#">Anglais</a>
+                    <a href="dept-en.html">Anglais</a>
                 </div>
             </div>
             <div>
@@ -55,7 +55,7 @@
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
     <div class="overlay" onclick="closeMenu()" id="overlay"></div>
     <div class="sidebar" id="sidebar">
-        <a href="acceuil.html">Accueil</a>
+        <a href="#">Accueil</a>
         <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
         <div class="submenu" id="submenu1">
             <a href="dept-info.html">Informatique</a>
@@ -81,10 +81,53 @@
         <a href="annonces.html">Annonces</a>
     </div>
 
-    
-    <div id="banner">Département d'anglais</div>
-    
-    <!--Début du site web.......................-->
+
+    <div class="content">
+        <h1 class="animation">BIENVENUE AU<br><br>LYCEE BILINGUE D'EKOUNOU</h1>
+        <h2 class="animation">Un petit pas pour ce lycée, mais un grand pas pour le Cameroun...</h2>
+    </div>
+
+
+        <!--image slider start-->
+        <div class="slider">
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                 <a href="#"><img src="images/lybek.jpg" alt=""></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/lybek2.jpg" alt=""></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/lybek3.jpg" alt=""></a>
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+         </div>
+         <!--image slider end-->
+
+         <div class="provi">
+            <h1>Quelques mots du proviseur</h1>
+         </div>
     <script src="JS/file0.js"></script>
 </body>
 </html>

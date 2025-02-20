@@ -35,6 +35,7 @@ header {
     padding: 10px 15px;
     /*pour que le menu soit toujours en haut*/
     position: sticky;
+    z-index: 1000;
     top: 0;
 }
 header img {
@@ -97,6 +98,7 @@ header img {
     padding-top: 60px;
     transition: 0.3s;
     color: white;
+    z-index: 1500;
 }
 .sidebar a {
     padding: 10px 15px;
@@ -120,15 +122,15 @@ header img {
     font-size: 20px;
     cursor: pointer;
     position: absolute;
-    top: 20px;
     left: 20px;
     background-color: #eb984e;
     color: white;
     border: none;
     padding: 10px 15px;
-    display: none;
+    /*épingler le menu donc c'est toujours en haut*/
     position: sticky;
     margin-top: -80px;
+    z-index: 1500;
 }
 /*propriétés de la barre verticale des liens*/
 .overlay {
@@ -139,186 +141,21 @@ header img {
     height: 200vh;
     background: rgba(0, 0, 0, 0.5);
     display: none;
-}
-
-
-/**adaptation pour les différents écrans*/
-/*@media apporte des changements qu'on spécifie à la page pour une largeur max ou min qu'on définit*/
-@media (max-width:1250px){
-    .desktop-menu {
-        margin-left: 8%;
-    }
-}
-@media (max-width:1075px){
-    .desktop-menu {
-        margin-left: 0%;
-        font-size: 13px;
-    }
-}
-@media (max-width: 875px) {
-    .desktop-menu { display: none; }
-    .open-btn {
-        display: block;
-     }
-     .overlay{display: none;}
-     header img{ margin-left: 75%;}
-}
-@media (min-width: 875px) {
-    .sidebar, .overlay, .open-btn { display: none; }
-    .desktop-menu { display: block; }
-}body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-/* Loader Styles */
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-.spinner {
-    animation: spin 3s linear infinite;
-}
-/*animation du loader*/
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-/*précise la page dans laquelle on se trouve*/
-#onglet{
-    background-color: #b4743d;
-    border-radius: 20px;
-}
-header {
-    display: flex;
-    align-items: center;
-    background-color: #eb984e;
-    padding: 10px 15px;
-    /*pour que le menu soit toujours en haut*/
-    position: sticky;
-    top: 0;
-}
-header img {
-    height: 80px;
-    margin-right: 20px;
-}
-/*propriétés du menu en mode bureau*/
-.desktop-menu {
-    display: none;
-    background-color: #eb984e;
-    padding: 10px;
-    top: 0;
-    margin-left: 17%;
-}
-.desktop-menu > div {
-    display: inline-block;
-    position: relative;
-}
-.desktop-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-}
-.desktop-menu a:hover {
-    background-color: #b4743d;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-.desktop-menu .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #bbb9b9;
-    min-width: 200px;
-    z-index: 1000;
-}
-.desktop-menu .submenu a {
-    display: block;
-    padding: 10px;
-    margin-left: -20px;
-    color: white;
-}
-.desktop-menu .submenu a:hover {
-    background-color: #b4743d;
-    border-radius: 0;
-}
-.desktop-menu > div:hover .submenu {
-    display: block;
-}
-/*propriétés du menu vertical (mode bureau)*/
-.sidebar {
-    height: 200vh;
-    width: 220px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #eb984e;
-    padding-top: 60px;
-    transition: 0.3s;
-    color: white;
-}
-.sidebar a {
-    padding: 10px 15px;
-    display: block;
-    color: white;
-    text-decoration: none;
-}
-.sidebar a:hover {
-    background-color: #b4743d;
-}
-.submenu {
-    display: none;
-    background-color: #eb984e;
-    padding-left: 20px;
-}
-.submenu a {
-    font-size: 14px;
-}
-/*propriétés du bouton 'menu' en mode mobile*/
-.open-btn {
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #eb984e;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    display: none;
-    position: sticky;
-    margin-top: -80px;
-}
-/*propriétés de la barre verticale des liens*/
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200vh;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
+    z-index: 1500;
 }
 #banner{
     height: 120px;
     width: 60%;
-    margin-left: 20%;
+    margin: 0 auto;
     margin-top: 20px;
-    background-image: url(images/francais.jpg);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-image: url(images/dept-fr.jpg);
     background-size: cover;
     border-radius: 20px;
     border: 3px solid #eb984e;
     color: #fff;
-    text-align: center;
     font-size: 60px;
 }
 
@@ -328,6 +165,10 @@ header img {
     .desktop-menu {
         margin-left: 8%;
     }
+    #banner{
+        height: 80px;
+        font-size: 30px;
+    }
 }
 @media (max-width:1075px){
     .desktop-menu {
@@ -337,13 +178,28 @@ header img {
 }
 @media (max-width: 875px) {
     .desktop-menu { display: none; }
-    .open-btn {
-        display: block;
-     }
+    .open-btn { display: block; }
      .overlay{display: none;}
      header img{ margin-left: 75%;}
+     
+    #banner{
+        height: 70px;
+        font-size: 27px;
+        margin-top: 50px;
+    }
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }
     .desktop-menu { display: block; }
+}
+@media (max-width:612px){
+    header img{width: 50px; height: 50px;}
+    .open-btn{ margin: -60px; }
+    #banner{
+        margin-top: 60px;
+        height: 50px;
+        font-size: 15px;
+        border: 1.5px solid #eb984e;
+        border-radius: 15px;
+    }
 }
