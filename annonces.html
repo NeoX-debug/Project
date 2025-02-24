@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="annonces.css">
     <link rel="icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceuil</title>
+    <title>Annonces</title>
 </head>
 <body>
     <!-- Loader -->
@@ -18,7 +18,7 @@
     <header>
         <img src="images/logo.png" alt="Logo Lycée Bilingue d'Ekounou">
         <div class="desktop-menu" id="desktop-menu">
-            <a href="#" id="onglet">Accueil</a>
+            <a href="acceuil.html">Accueil</a>
             <div>
                 <a href="#">Départements ▼</a>
                 <div class="submenu">
@@ -47,7 +47,7 @@
             </div>
             <a href="clubs.html">Clubs</a>
             <a href="album.html">Album photo</a>
-            <a href="annonces.html">Annonces</a>
+            <a href="annonces.html" id="onglet">Annonces</a>
         </div>
     </header>
 
@@ -55,7 +55,7 @@
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
     <div class="overlay" onclick="closeMenu()" id="overlay"></div>
     <div class="sidebar" id="sidebar">
-        <a href="#">Accueil</a>
+        <a href="acceuil.html">Accueil</a>
         <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
         <div class="submenu" id="submenu1">
             <a href="dept-info.html">Informatique</a>
@@ -82,63 +82,69 @@
     </div>
 
 
-    <div class="content">
-        <h1 class="animation">BIENVENUE AU<br><br>LYCEE BILINGUE D'EKOUNOU</h1>
-        <h2 class="animation">Un petit pas pour ce lycée, mais un grand pas pour le Cameroun...</h2>
+    
+    
+    <div class="annonces">
+        <div id="annonces">
+            <h1>Chers membres du site, nous vous informons que les évaluations de la 5è séquence débuteront dans 04 semaines. Merci :)</h1>
+        </div>
     </div>
 
+    
+    <div class="container">
+		<div class="slide">
+			<div class="item" style="background-image: url(images/santé4.jpg);">
+				<div class="content">
+					<div class="name">JOURNEE MONDIALE DE LA SANTE</div>
+					<div class="des"> SOLO LEVELING est une oeuvre coreenne sortie en 2024</div>
+					<button>En savoir plus...</button>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(images/secu.jpg);">
+				<div class="content">
+					<div class="name">JOURNEE DE LA SECURITE INFORMATIQUE</div>
+					<div class="des">Suivez luffy dans ses combats fou qu sommum du gear5</div>
+					<button><a href="">En savoir plus...</a></button>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(images/philo.jpg);">
+				<div class="content">
+					<div class="name">JOURNEE DE LA PHILOSOPHIE</div>
+					<div class="des">l'infini scéllé de nouveau fléau comment yuji reussira t'il a s'en sortir</div>
+					<button><a href="">En savoir plus...</a></button>
+				</div>
+			</div>
+			<div class="item" style="background-image: url(images/santé3.jpg);">
+				<div class="content">
+					<div class="name">JOURNEE DE L'ENVIRONNEMENT</div>
+					<div class="des">deku</div>
+					<button><a href="">En savoir plus...</a></button>
+				</div>
+			</div>
+		</div>
+		<div class="button">
+            <img src="images/leftArrow.png" width="60px" class="prev" alt="">
+            <img src="images/rightArrow.png" width="60px" class="next" alt="" srcset="">
+		</div>
+	</div>
 
-        <!--image slider start-->
-        <div class="slider">
-            <div class="slides">
-                <!--radio buttons start-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <!--radio buttons end-->
-                <!--slide images start-->
-                <div class="slide first">
-                 <a href="#"><img src="images/lybek.jpg" alt=""></a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="images/lybek2.jpg" alt=""></a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="images/lybek3.jpg" alt=""></a>
-                </div>
-                <!--slide images end-->
-                <!--automatic navigation start-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
-                <!--automatic navigation end-->
-            </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-            <!--manual navigation end-->
-         </div>
-         <!--image slider end-->
-
-         <div class="provi">
-            <div id="mot">
-                <p id="titre">Quelques mots du proviseur<hr width="20%" color="white"></p>
-                <p id="texte">
-                    Chèr(e) visiteur,<br>
-                    En ma qualité de proviseur, j’ai le plaisir de vous souhaiter la bienvenue sur le site web du Lycée Blingue d'Ekounou(LYBEK).
-                    Le LYBEK est un pôle d’Excellence polytechnique au service du développement local, national et sous régional. 
-                    Il a pour missions spécifiques d’assurer : La formation de ses élèves et le suivi dans le cursus extra-scolaire
-                </p>
-            </div>
-            <div id="img">
-                <img src="images/compte.jpg" height="300px" width="300px" alt="">
-            </div>
-         </div>
-    <script src="JS/acceuil.js"></script>
+    
+    <div class="containing">
+        <div class="categorie">
+            <img src="images/santé.png" height="65%" width="100%">
+            <span>
+                <p>Journée mondiale de la santé</p>
+                <a href="">En savoir plus...</a>
+            </span>
+        </div>
+        <div class="categorie">
+            <img src="images/secu2.jpg" height="65%" width="100%">
+            <span>
+                <p>Journée de la sécurité informatique</p>
+                <a href="">En savoir plus...</a>
+            </span>
+        </div>
+    </div>    
+    <script src="JS/annonces.js"></script>
 </body>
 </html>

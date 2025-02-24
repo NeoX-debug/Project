@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%), url(images/club3.png);
     background-size: cover;
+    background-attachment: fixed;
 }
 /* Loader Styles */
 #loader {
@@ -186,6 +187,15 @@ header img {
     .desktop-menu {
         margin-left: 8%;
     }
+    .categorie{
+        height: 130px;
+    }
+    .categorie p{
+        font-size: 100%;
+    }
+    .categorie a{
+        font-size: 80%;
+    }
 }
 @media (max-width:1075px){
     .desktop-menu {
@@ -200,6 +210,13 @@ header img {
      }
      .overlay{display: none;}
      header img{ margin-left: 75%;}
+     .categorie{
+        float: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 270px;
+        height: 120px;
+    }
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }
