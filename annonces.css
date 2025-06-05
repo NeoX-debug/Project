@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%), url(images/lybek4.JPG);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%), url(images/annonces.png);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -12,10 +12,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%);
     z-index: 2000;
 }
 .spinner {
@@ -187,7 +188,8 @@ header img {
     margin-left: 50px;
     width: 80%;
     height: 800px;
-    box-shadow: 0 20px 50px #2c2929d8;
+    border: 2px solid #eb984e;
+    border-radius: 15px;
 }
 .container .slide .item{
     width: 200px;
@@ -196,7 +198,6 @@ header img {
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 10px 50px #505050;
     background-position: 50% 50%;
     background-size: cover;
     display: inline-block;
@@ -207,6 +208,7 @@ header img {
     left: 0;
     transform: translate(0,0);
     border-radius: 0;
+    border-radius: 15px;
     width: 100%;
     height: 100%;
 }
@@ -290,22 +292,30 @@ header img {
 /*fin du code du slider*/
 
 
-.containing{ margin-top: 1000px; }
+.containing{ 
+    width: 80%;
+    margin-top: 3000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement */
+}
 .categorie{
     width: 30%;
     height: 350px;
-    background-color: #858484;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
+    backdrop-filter: blur(8px);
     border: 2px solid #eb984e;
     color: #eb984e;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 20px;
-    margin-left: 15%;
+    float: left;
     text-align: center;
 }
 .categorie img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .categorie p{
     font-size: 130%;

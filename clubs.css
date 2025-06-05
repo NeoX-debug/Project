@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%), url(images/club3.png);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(images/clubs.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -12,7 +12,8 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,11 +149,14 @@ header img {
     z-index: 1500;
 }
 
-.container{ margin-top: 100px; }
+.container{ 
+    margin-top: 100px;
+}
 .categorie{
     width: 25%;
     height: 170px;
-    background-color: #858484;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
+    backdrop-filter: blur(8px);
     border: 2px solid #eb984e;
     color: #eb984e;
     border-radius: 10px;
@@ -188,16 +192,18 @@ header img {
         margin-left: 8%;
     }
     .categorie{
-        height: 130px;
+        height: 100px;
+        border: 1px solid #eb984e;
     }
     .categorie p{
-        font-size: 100%;
+        font-size: 80%;
     }
     .categorie a{
-        font-size: 80%;
+        font-size: 60%;
     }
 }
 @media (max-width:1075px){
+    body{background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(images/clubs_mobile.png); background-size: cover;}
     .desktop-menu {
         margin-left: 0%;
         font-size: 13px;

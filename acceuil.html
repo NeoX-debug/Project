@@ -18,7 +18,7 @@
     <header>
         <img src="images/logo.png" alt="Logo Lycée Bilingue d'Ekounou">
         <div class="desktop-menu" id="desktop-menu">
-            <a href="#" id="onglet">Accueil</a>
+            <a href="" id="onglet">Accueil</a>
             <div>
                 <a href="#">Départements ▼</a>
                 <div class="submenu">
@@ -36,15 +36,7 @@
                     <a href="anglophone.html">Anglophone</a>
                 </div>
             </div>
-            <div>
-                <a href="#">Hiérarchie ▼</a>
-                <div class="submenu">
-                    <a href="#">Haute hiérarchie</a>
-                    <a href="#">Censeurs</a>
-                    <a href="#">Surveillants généraux</a>
-                    <a href="#">Surveillants de secteur</a>
-                </div>
-            </div>
+            <a href="#">Hiérarchie</a>
             <a href="clubs.html">Clubs</a>
             <a href="album.html">Album photo</a>
             <a href="annonces.html">Annonces</a>
@@ -55,7 +47,7 @@
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
     <div class="overlay" onclick="closeMenu()" id="overlay"></div>
     <div class="sidebar" id="sidebar">
-        <a href="#">Accueil</a>
+        <a href="acceuil.html" id="onglet">Accueil</a>
         <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
         <div class="submenu" id="submenu1">
             <a href="dept-info.html">Informatique</a>
@@ -69,76 +61,72 @@
             <a href="francophone.html">Francophone</a>
             <a href="anglophone.html">Anglophone</a>
         </div>
-        <a href="#" onclick="toggleSubmenu(event, 'submenu3')">Hiérarchie ▼</a>
-        <div class="submenu" id="submenu3">
-            <a href="#">Haute hiérarchie</a>
-            <a href="#">Censeurs</a>
-            <a href="#">Surveillants généraux</a>
-            <a href="#">Surveillants de secteur</a>
-        </div>
+        <a href="#">Hiérarchie</a>
         <a href="clubs.html">Clubs</a>
-        <a href="album.html">Album photo</a>
+        <a href="">Album photo</a>
         <a href="annonces.html">Annonces</a>
     </div>
 
 
     <div class="content">
-        <h1 class="animation">BIENVENUE AU<br><br>LYCEE BILINGUE D'EKOUNOU</h1>
-        <h2 class="animation">Un petit pas pour ce lycée, mais un grand pas pour le Cameroun...</h2>
+        <h3 class="animation">BIENVENUE AU <br>LYCEE BILINGUE D'EKOUNOU</h3>
+        <h2 class="animation">Le LYBEK est une grande école publique en pleine émergence sociotechnologique. Il a pour objectif la transmission totale de ses connaissances à ses élèves
+            dans les cardres les plus familiaux qu'il soit pour que ceux-ci se sentent à l'aise. Il montre aux élèves la vie socioprofessionnelle qui les attend après le lycée
+            et comment confronter certains problèmes de la vie active.</h2>
+    </div>
+    <h1 class="slogan">UN PETIT PAS POUR CE LYCEE, MAIS UN GRAND PAS POUR LE CAMEROUN...</h1>
+
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="pc wallpapers 4k/-5927150908699952158_121.jpg" alt="Slide 1">
+                <div class="slide-content">
+                    <h2>Bienvenue au LYBEK</h2>
+                    <p>Découvrez des opportunités incroyables avec nous.</p>
+                    <a href="slider.html" class="btn">En savoir plus</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="pc wallpapers 4k/-5927150908699952218_121.jpg" alt="Slide 2">
+                <div class="slide-content">
+                    <h2>Fonctionnalités exclusives</h2>
+                    <p>Notre plateforme offre des outils puissants et uniques.</p>
+                    <a href="#" class="btn">Voir les fonctionnalités</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="pc wallpapers 4k/-5927150908699952213_121.jpg" alt="Slide 3">
+                <div class="slide-content">
+                    <h2>Rejoignez-nous !</h2>
+                    <p>Faites partie de notre communauté grandissante.</p>
+                    <a href="#" class="btn">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+        <button class="nav prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
     </div>
 
 
-        <!--image slider start-->
-        <div class="slider">
-            <div class="slides">
-                <!--radio buttons start-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <!--radio buttons end-->
-                <!--slide images start-->
-                <div class="slide first">
-                 <a href="#"><img src="images/lybek.jpg" alt=""></a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="images/lybek2.jpg" alt=""></a>
-                </div>
-                <div class="slide">
-                    <a href="#"><img src="images/lybek3.jpg" alt=""></a>
-                </div>
-                <!--slide images end-->
-                <!--automatic navigation start-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
-                <!--automatic navigation end-->
-            </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-            <!--manual navigation end-->
-         </div>
-         <!--image slider end-->
-
-         <div class="provi">
-            <div id="mot">
-                <p id="titre">Quelques mots du proviseur<hr width="20%" color="white"></p>
-                <p id="texte">
-                    Chèr(e) visiteur,<br>
-                    En ma qualité de proviseur, j’ai le plaisir de vous souhaiter la bienvenue sur le site web du Lycée Blingue d'Ekounou(LYBEK).
-                    Le LYBEK est un pôle d’Excellence polytechnique au service du développement local, national et sous régional. 
-                    Il a pour missions spécifiques d’assurer : La formation de ses élèves et le suivi dans le cursus extra-scolaire
-                </p>
-            </div>
-            <div id="img">
-                <img src="images/compte.jpg" height="300px" width="300px" alt="">
-            </div>
-         </div>
+     <div class="provi" style="display: flex; justify-content: center; align-items: center;">
+        <div id="texte">
+            <h3 class="titre">Quelques mots du proviseur</h3><hr width="50%">
+            <h4>
+                Chèr(e) visiteur,<br>
+                En ma qualité de proviseur, j’ai le plaisir de vous souhaiter la bienvenue sur le site web du Lycée Blingue d'Ekounou(LYBEK).
+                Le LYBEK est un pôle d’Excellence polytechnique au service du développement local, national et sous régional. 
+                Il a pour missions spécifiques d’assurer : La formation de ses élèves et le suivi dans le cursus extra-scolaire
+            </h4>
+        </div>
+        <img src="images/compte.jpg" height="270px" width="30%" alt="">
+    </div>
+    
     <script src="JS/acceuil.js"></script>
 </body>
 </html>
