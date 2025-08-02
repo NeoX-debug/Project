@@ -18,7 +18,7 @@
     <header>
         <img src="images/logo.png" alt="Logo Lycée Bilingue d'Ekounou">
         <div class="desktop-menu" id="desktop-menu">
-            <a href="acceuil.html">Accueil</a>
+            <a href="index.html">Accueil</a>
             <div>
                 <a href="#">Départements ▼</a>
                 <div class="submenu">
@@ -47,7 +47,7 @@
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
     <div class="overlay" onclick="closeMenu()" id="overlay"></div>
     <div class="sidebar" id="sidebar">
-        <a href="acceuil.html">Accueil</a>
+        <a href="index.html">Accueil</a>
         <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
         <div class="submenu" id="submenu1">
             <a href="dept-info.html">Informatique</a>
@@ -77,44 +77,41 @@
     </div>
 
     
-    <div class="container">
-		<div class="slide">
-			<div class="item" style="background-image: url(images/santé4.jpeg);">
-				<div class="content">
-					<div class="name">JOURNEE MONDIALE DE LA SANTE</div>
-					<div class="des"> SOLO LEVELING est une oeuvre coreenne sortie en 2024</div>
-					<button>En savoir plus...</button>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(images/secu.jpg);">
-				<div class="content">
-					<div class="name">JOURNEE DE LA SECURITE INFORMATIQUE</div>
-					<div class="des">Suivez luffy dans ses combats fou qu sommum du gear5</div>
-					<button><a href="">En savoir plus...</a></button>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(images/philo.jpg);">
-				<div class="content">
-					<div class="name">JOURNEE DE LA PHILOSOPHIE</div>
-					<div class="des">l'infini scéllé de nouveau fléau comment yuji reussira t'il a s'en sortir</div>
-					<button><a href="">En savoir plus...</a></button>
-				</div>
-			</div>
-			<div class="item" style="background-image: url(images/santé3.jpg);">
-				<div class="content">
-					<div class="name">JOURNEE DE L'ENVIRONNEMENT</div>
-					<div class="des">deku</div>
-					<button><a href="">En savoir plus...</a></button>
-				</div>
-			</div>
-		</div>
-		<div class="button">
-            <img src="images/leftArrow.png" width="60px" class="prev" alt="">
-            <img src="images/rightArrow.png" width="60px" class="next" alt="" srcset="">
-		</div>
-	</div>
-
-    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="images/santé4.jpeg" alt="Slide 1">
+                <div class="slide-content" >
+                    <h2>JOURNEE MONDIALE DE LA SANTE</h2>
+                    <p>Suivez luffy dans ses combats fou qu sommum du gear5</p>
+                    <a href="slider.html" class="btn">En savoir plus...</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/secu.jpg" alt="Slide 2">
+                <div class="slide-content">
+                    <h2>JOURNEE DE LA SECURITE INFORMATIQUE</h2>
+                    <p>Notre plateforme offre des outils puissants et uniques.</p>
+                    <a href="#" class="btn">En savoir plus...</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/philo.jpg" alt="Slide 3">
+                <div class="slide-content">
+                    <h2>JOURNEE DE LA PHILOSOPHIE</h2>
+                    <p>l'infini scéllé de nouveau fléau comment yuji reussira t'il a s'en sortir</p>
+                    <a href="#" class="btn">En savoir plus...</a>
+                </div>
+            </div>
+        </div>
+        <button class="nav prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="nav next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
     <div class="containing">
         <div class="categorie">
             <img src="images/santé.png" height="65%" width="100%">

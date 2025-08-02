@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="anglophone.css">
+    <link rel="icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglophone</title>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner">
+            <img src="images/logo.png" class="loader-image" height="150px" width="150px" alt="">
+        </div>
+    </div>
+
+
+    <header>
+        <img src="images/logo.png" alt="Logo Lycée Bilingue d'Ekounou">
+        <div class="desktop-menu" id="desktop-menu">
+            <a href="index.html">Accueil</a>
+            <div>
+                <a href="#">Départements ▼</a>
+                <div class="submenu">
+                    <a href="dept-info.html">Informatique</a>
+                    <a href="#">Mathématiques</a>
+                    <a href="dept-pct.html">PCT</a>
+                    <a href="dept-fr.html">Français</a>
+                    <a href="dept-en.html">Anglais</a>
+                </div>
+            </div>
+            <div>
+                <a href="#" id="onglet">Enseignements ▼</a>
+                <div class="submenu">
+                    <a href="francophone.html">Francophone</a>
+                    <a href="#">Anglophone</a>
+                </div>
+            </div>
+            <a href="#">Hiérarchie</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="album.html">Album photo</a>
+            <a href="annonces.html">Annonces</a>
+        </div>
+    </header>
+
+
+    <button class="open-btn" onclick="openMenu()">☰ Menu</button>
+    <div class="overlay" onclick="closeMenu()" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Accueil</a>
+        <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
+        <div class="submenu" id="submenu1">
+            <a href="dept-info.html">Informatique</a>
+            <a href="#">Mathématiques</a>
+            <a href="dept-pct.html">PCT</a>
+            <a href="dept-fr.html">Français</a>
+            <a href="dept-en.html">Anglais</a>
+        </div>
+        <a href="#" onclick="toggleSubmenu(event, 'submenu2')">Enseignements ▼</a>
+        <div class="submenu" id="submenu2">
+            <a href="francophone.html">Francophone</a>
+            <a href="#">Anglophone</a>
+        </div>
+        <a href="#">Hiérarchie</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="album.html">Album photo</a>
+        <a href="annonces.html">Annonces</a>
+    </div>
+
+    <div class="class">
+        <a href="">Form 1</a>
+        <a href="">Form 2</a>
+        <a href="">Form 3</a>
+        <a href="">Form 4</a>
+        <a href="">Form 5</a>
+        <a href="">Lower Sixth</a>
+        <a href="">Upper Sixth</a>
+    </div>
+    <div class="subjects" id="Form1">
+    </div>
+    <div class="epreuves">
+        <embed src="Document/TP INF132.pdf" height="200px"  width="200px">
+    </div>
+
+    <!--Début du site web.......................-->
+    <script src="JS/file0.js"></script>
+</body>
+
+</html>
