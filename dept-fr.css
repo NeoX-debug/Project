@@ -188,6 +188,7 @@ header img {
         font-size: 27px;
         margin-top: 50px;
     }
+    #onglet{border-radius: 0;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

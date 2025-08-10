@@ -94,7 +94,7 @@ header img {
 }
 /*propriétés du menu vertical (mode bureau)*/
 .sidebar {
-    height: 450vh;
+    height: 350vh;
     width: 220px;
     position: fixed;
     top: 0;
@@ -144,7 +144,7 @@ header img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 450vh;
+    height: 350vh;
     background: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 1500;
@@ -180,6 +180,11 @@ header img {
     .open-btn { display: block; }
     .overlay{display: none;}
     header img{ margin-left: 75%;}
+    #onglet{border-radius: 0;}
+    #photo img{width: 225px; height: 110px;}
+    #titre{margin-top: 50px;}
+    #titre h1{ font-size: 6.5vw;}
+    hr{width: 25%;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

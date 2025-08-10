@@ -36,7 +36,7 @@
                     <a href="anglophone.html">Anglophone</a>
                 </div>
             </div>
-            <a href="#">Hiérarchie</a>
+            <a href="hierarchie.html">Hiérarchie</a>
             <a href="clubs.html">Clubs</a>
             <a href="album.html">Album photo</a>
             <a href="annonces.html" id="onglet">Annonces</a>
@@ -61,10 +61,10 @@
             <a href="francophone.html">Francophone</a>
             <a href="anglophone.html">Anglophone</a>
         </div>
-        <a href="#">Hiérarchie</a>
+        <a href="hierarchie.html">Hiérarchie</a>
         <a href="clubs.html">Clubs</a>
         <a href="album.html">Album photo</a>
-        <a href="annonces.html">Annonces</a>
+        <a href="#" id="onglet">Annonces</a>
     </div>
 
 
@@ -104,30 +104,33 @@
                 </div>
             </div>
         </div>
-        <button class="nav prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="nav next" onclick="changeSlide(1)">&#10095;</button>
+        <button class="nav prev" onclick="changeSlide(-1)"><img src="images/rA.png" width="90%" alt="" ></button>
+        <button class="nav next" onclick="changeSlide(1)"><img src="images/lA.png" width="90%" alt="" ></button>
         <div class="dots">
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
     </div>
-    <div class="containing">
+
+
+    
+    <div class="container" style="text-align: center;">
         <div class="categorie">
-            <img src="images/santé.png" height="65%" width="100%">
+            <img src="images/santé.png" height="60%" width="100%">
             <span>
-                <p>Journée mondiale de la santé</p>
+                <p>Journée mondiale de la santé</p><hr width="50%" color="white">
                 <a href="">En savoir plus...</a>
             </span>
         </div>
         <div class="categorie">
-            <img src="images/secu1.jpg" height="65%" width="100%">
+            <img src="images/secu1.jpg" height="60%" width="100%">
             <span>
-                <p>Journée de la sécurité informatique</p>
+                <p>Journée de la sécurité informatique</p><hr width="50%" color="white">
                 <a href="">En savoir plus...</a>
             </span>
         </div>
-    </div>    
+    </div>
     <script src="JS/annonces.js"></script>
 </body>
 </html>

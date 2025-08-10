@@ -1,9 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(images/clubs.jpg);
-    background-size: cover;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(images/hierarchie.png);
     background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
 }
 /* Loader Styles */
 #loader {
@@ -12,8 +16,8 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%);
     backdrop-filter: blur(15px);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,17 +96,17 @@ header img {
     display: block;
 }
 /*propriétés du menu vertical (mode bureau)*/
+.autre{position: sticky; top: 0; z-index: 1500;}
 .sidebar {
     height: 200vh;
     width: 220px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -250px;
     background-color: #eb984e;
     padding-top: 60px;
     transition: 0.3s;
     color: white;
-    z-index: 1500;
 }
 .sidebar a {
     padding: 10px 15px;
@@ -139,7 +143,7 @@ header img {
 }
 /*propriétés de la barre verticale des liens*/
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -149,41 +153,56 @@ header img {
     z-index: 1500;
 }
 
-.container{ 
-    margin-top: 100px;
+#sous-menu{
+    height: 80px;
+    display: flex;
+    border: 2px solid #b4743d;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    z-index: 800;
+    top: 130px;
+}
+#sous-menu a{
+    text-decoration: none;
+    margin-left: 90px;
+    color: #fff;
+}
+#sous-menu a:hover{
+    color: #eb984e;
+    transition: 0.2s;
+}
+section{
+    scroll-margin-top: 200px;
+    height: 650px;
+}
+#titre h1{
+    margin-left: 40px;
+    float: left;
+    color: #a06a3a;
+    font-size: 2.5vw;
 }
 .categorie{
-    width: 25%;
-    height: 170px;
+    width: 250px;
+    height: 350px;
     background-image: linear-gradient(to top, rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
     backdrop-filter: blur(8px);
     border: 2px solid #eb984e;
     color: #eb984e;
     border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 20px;
     float: left;
-    margin-left: 15%;
+    margin-top: 20px;
+    margin: 10px;
+}
+p{
+    color: #fff;
+    transform: translateX(15px);
 }
 .categorie img{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-.categorie p{
-    font-size: 130%;
-}
-.categorie span{
-    width: 55%;
-    float: right;
-    text-align: center;
-}
-.categorie a{
-    text-decoration: none;
-    color: aliceblue;
-}
-.categorie a:hover{
-    color: #eb984e;
-    transition: 0.3s;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 /**adaptation pour les différents écrans*/
@@ -192,19 +211,8 @@ header img {
     .desktop-menu {
         margin-left: 8%;
     }
-    .categorie{
-        height: 100px;
-        border: 1px solid #eb984e;
-    }
-    .categorie p{
-        font-size: 80%;
-    }
-    .categorie a{
-        font-size: 60%;
-    }
 }
 @media (max-width:1075px){
-    body{background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(images/clubs_mobile.png); background-size: cover;}
     .desktop-menu {
         margin-left: 0%;
         font-size: 13px;
@@ -212,19 +220,25 @@ header img {
 }
 @media (max-width: 875px) {
     .desktop-menu { display: none; }
-    .open-btn {
-        display: block;
-     }
-     .overlay{display: none;}
-     header img{ margin-left: 75%;}
-     .categorie{
-        float: none;
-        margin: 0 auto;
-        margin-top: 20px;
-        width: 270px;
-        height: 120px;
-    }
+    .open-btn { display: block; }
+    .overlay{display: none;}
+    header img{ margin-left: 75%;}
     #onglet{border-radius: 0;}
+    #sous-menu{
+        height: 50px;
+        top: 100px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    #sous-menu a{font-size: 70%;margin-left: 0px;}
+    #titre h1{font-size: 5.5vw; margin-top: 50px; text-align: center;}
+    hr{width: 25%;}
+    section{
+        scroll-margin-top: 170px;
+    }
+    .categorie{width: 150px;height: 250px; flex-direction: column;}
+    .categorie img{height: 150px;}
+    p{font-size: 80%;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File0</title>
+    <title>Acceuil</title>
 </head>
 <body>
     <!-- Loader -->
@@ -36,7 +36,7 @@
                     <a href="anglophone.html">Anglophone</a>
                 </div>
             </div>
-            <a href="#">Hiérarchie</a>
+            <a href="hierarchie.html">Hiérarchie</a>
             <a href="clubs.html">Clubs</a>
             <a href="album.html">Album photo</a>
             <a href="annonces.html">Annonces</a>
@@ -47,7 +47,7 @@
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
     <div class="overlay" onclick="closeMenu()" id="overlay"></div>
     <div class="sidebar" id="sidebar">
-        <a href="#">Accueil</a>
+        <a href="#" id="onglet">Accueil</a>
         <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
         <div class="submenu" id="submenu1">
             <a href="dept-info.html">Informatique</a>
@@ -61,7 +61,7 @@
             <a href="francophone.html">Francophone</a>
             <a href="anglophone.html">Anglophone</a>
         </div>
-        <a href="#">Hiérarchie</a>
+        <a href="hierarchie.html">Hiérarchie</a>
         <a href="clubs.html">Clubs</a>
         <a href="album.html">Album photo</a>
         <a href="annonces.html">Annonces</a>
@@ -73,15 +73,15 @@
             <div class="slide active">
                 <img src="images/santé4.jpeg" alt="Slide 1">
                 <div class="slide-content" >
-                    <h2>JOURNEE MONDIALE DE LA SANTE</h2>
-                    <p>Suivez luffy dans ses combats fou qu sommum du gear5</p>
+                    <h2>BIENVENUE</h2>
+                    <p>Une éducation adéquate dans un cardre adéquat</p>
                     <a href="slider.html" class="btn">En savoir plus...</a>
                 </div>
             </div>
             <div class="slide">
                 <img src="images/secu.jpg" alt="Slide 2">
                 <div class="slide-content">
-                    <h2>JOURNEE DE LA SECURITE INFORMATIQUE</h2>
+                    <h2>A PROPOS DE NOUS</h2>
                     <p>Notre plateforme offre des outils puissants et uniques.</p>
                     <a href="#" class="btn">En savoir plus...</a>
                 </div>
@@ -95,14 +95,16 @@
                 </div>
             </div>
         </div>
-        <button class="nav prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="nav next" onclick="changeSlide(1)">&#10095;</button>
+        <button class="nav prev" onclick="changeSlide(-1)"><img src="images/rA.png" width="90%" alt="" ></button>
+        <button class="nav next" onclick="changeSlide(1)"><img src="images/lA.png" width="90%" alt="" ></button>
         <div class="dots">
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
             <span class="dot" onclick="goToSlide(2)"></span>
         </div>
     </div>
+
+    
      <div class="provi" style="display: flex; justify-content: center; align-items: center;">
         <div id="texte">
             <h3 class="titre">Quelques mots du proviseur</h3><hr width="50%">
@@ -113,7 +115,7 @@
                 Il a pour missions spécifiques d’assurer : La formation de ses élèves et le suivi dans le cursus extra-scolaire
             </h4>
         </div>
-        <img src="images/compte.jpg" height="270px" width="30%" alt="">
+        <img src="images/compte.jpg" height="270px" width="17%" alt="">
     </div>
     
     <!--Début du site web.......................-->

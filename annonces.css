@@ -152,22 +152,23 @@ header img {
 
 /*barre de défilement*/
 .annonces {
-    margin-top: 30px;
+    margin-top: 10px;
     overflow: hidden;
     height: 80px;
-    width: auto;
+    width: 100%;
     border: 2px solid #eb984e;
     backdrop-filter: blur(5px);
     background: linear-gradient(to top, rgba(0,0,0,0.3)50%,rgba(0,0,0,0.3)50%);
     border-right: none;
     color: #e6e6e6;
     font-family: sans-serif;
+    font-size: 15px;
 }
 #annonces {
   height: 50px;
-  width: 120%;
+  width: 100%;
   display: flex;
-  animation: sliding 30s infinite;
+  animation: sliding 20s infinite;
 }
 @keyframes sliding {
   0% {
@@ -182,10 +183,10 @@ header img {
 
 /*début du slider*/
 .slider {
-    margin-top: 60px;
+    margin-top: 10px;
     position: relative;
     width: 100%;
-    height: 50vw;  
+    height: 40vw;  
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
@@ -275,16 +276,13 @@ header img {
     border-radius: 50%;
     width: 44px;
     height: 44px;
-    font-size: 2rem;
-    color: #fda085;
     cursor: pointer;
     z-index: 10;
     transition: background 0.2s, color 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .nav:hover {
-    background: #fda085;
-    color: #fff;
+    background: #fff;
 }
 .prev { left: 18px; }
 .next { right: 18px; }
@@ -314,17 +312,12 @@ header img {
 /*fin du slider*/
 
 
-.containing{ 
-    width: 80%;
-    margin-top: 3000px;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center; /* centre horizontalement */
-    align-items: center;     /* centre verticalement */
+.container{ 
+    margin-top: 100px;
 }
 .categorie{
-    width: 30%;
-    height: 350px;
+    width: 22%;
+    height: 300px;
     background-image: linear-gradient(to top, rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
     backdrop-filter: blur(8px);
     border: 2px solid #eb984e;
@@ -333,28 +326,44 @@ header img {
     margin: 0 auto;
     margin-top: 20px;
     float: left;
-    text-align: center;
+    margin-left: 19%;
 }
 .categorie img{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 .categorie p{
     font-size: 130%;
+}
+.categorie span{
+    text-align: center;
 }
 .categorie a{
     text-decoration: none;
     color: aliceblue;
 }
-.categorie a:hover{color: #eb984e;
+.categorie a:hover{
+    color: #eb984e;
     transition: 0.3s;
 }
 
 /**adaptation pour les différents écrans*/
 /*@media apporte des changements qu'on spécifie à la page pour une largeur max ou min qu'on définit*/
 @media (max-width:1250px){
-    .desktop-menu {
-        margin-left: 8%;
+    .desktop-menu {margin-left: 8%;}
+    .slide-content h2 {font-size: 1.7rem;}
+    .slide-content p {font-size: 0.7rem;}
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    .nav {
+        width: 25px;
+        height: 25px;
+    }
+    .nav img {
+        width: 80%;
+        margin-top: 5px;
     }
 }
 @media (max-width:1075px){
@@ -368,6 +377,47 @@ header img {
     .open-btn { display: block; }
     .overlay{display: none;}
     header img{ margin-left: 75%;}
+    .annonces {
+    margin-top: 40px;
+    height: 35px;
+    border: 1px solid #eb984e;
+    border-right: none;
+    font-size: 5.6px;
+    }
+    #annonces{width: 130%;}
+    .slider {margin-top: 40px;}
+    .btn{font-size: 0.5rem; font-weight: normal;}
+    #onglet{border-radius: 0;}
+    .dot {
+        width: 6px;
+        height: 6px;
+        border: 0.7px solid #fff;
+    }
+    .dots{bottom: 8px;}
+    .nav {
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.7);
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .container{margin-top: 50px;}
+     .categorie{
+        float: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 270px;
+        height: 170px;
+    }
+    .categorie p{font-size: 100%; margin-top: 2px;}
+    .categorie hr{height: 0.5px; border: none; margin-top: -5px;}
+    .categorie a{font-size: 80%;}
+    .slide-content h2 {font-size: 1rem;}
+
+    .slide-content p {font-size: 0.7rem;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }
