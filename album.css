@@ -271,6 +271,7 @@ header img {
     #titre h1{ font-size: 6.5vw;}
     hr{width: 25%;}
     #overlay2 img{width: 90%; height: 300px; margin-top: 30vh;}
+    #items span{margin: -350px;}
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }
