@@ -147,18 +147,27 @@ header img {
 }
 #banner{
     height: 120px;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 20px;
     justify-content: center;
     display: flex;
     align-items: center;
-    background-image: url(images/dept-fr.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(images/dept-en.jpg);
     background-size: cover;
     border-radius: 20px;
     border: 3px solid #eb984e;
     color: #fff;
-    font-size: 60px;
+    font-size: 3.5vw;
+}
+#sub-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
 }
 
 /**adaptation pour les différents écrans*/
@@ -182,6 +191,13 @@ header img {
      .overlay{display: none;}
      header img{ margin-left: 75%;}
     #onglet{border-radius: 0;}
+
+
+    #banner{
+        height: 40px;
+        margin-top: 40px;
+        border: 2px solid #eb984e;
+    }
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

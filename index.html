@@ -45,26 +45,31 @@
 
     
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
-    <div class="overlay" onclick="closeMenu()" id="overlay"></div>
-    <div class="sidebar" id="sidebar">
-        <a href="#" id="onglet">Accueil</a>
-        <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
-        <div class="submenu" id="submenu1">
-            <a href="dept-info.html">Informatique</a>
-            <a href="#">Mathématiques</a>
-            <a href="dept-pct.html">PCT</a>
-            <a href="dept-fr.html">Français</a>
-            <a href="dept-en.html">Anglais</a>
+    <div class="autre">
+        <div class="overlay" onclick="closeMenu()" id="overlay"></div>
+    </div>
+    <div class="autre">
+        <div class="sidebar" id="sidebar">
+            <a href="index.html" id="onglet">Accueil</a>
+            <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
+            <div class="submenu" id="submenu1">
+                <a href="dept-info.html">Informatique</a>
+                <a href="#">Mathématiques</a>
+                <a href="dept-pct.html">PCT</a>
+                <a href="dept-fr.html">Français</a>
+                <a href="dept-en.html">Anglais</a>
+            </div>
+            <a href="#" onclick="toggleSubmenu(event, 'submenu2')">Enseignements ▼</a>
+            <div class="submenu" id="submenu2">
+                <a href="francophone.html">Francophone</a>
+                <a href="anglophone.html">Anglophone</a>
+            </div>
+                <a href="hierarchie.html">Hiérarchie</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="album.html">Album photo</a>
+                <a href="annonces.html">Annonces</a>
+            </div>
         </div>
-        <a href="#" onclick="toggleSubmenu(event, 'submenu2')">Enseignements ▼</a>
-        <div class="submenu" id="submenu2">
-            <a href="francophone.html">Francophone</a>
-            <a href="anglophone.html">Anglophone</a>
-        </div>
-        <a href="hierarchie.html">Hiérarchie</a>
-        <a href="clubs.html">Clubs</a>
-        <a href="album.html">Album photo</a>
-        <a href="annonces.html">Annonces</a>
     </div>
 
 
@@ -73,7 +78,7 @@
             <div class="slide active">
                 <img src="images/santé4.jpeg" alt="Slide 1">
                 <div class="slide-content" >
-                    <h2>BIENVENUE</h2>
+                    <h2>BIENVENUE AU LYCEE BILINGUE D'EKOUNOU</h2>
                     <p>Une éducation adéquate dans un cardre adéquat</p>
                     <a href="slider.html" class="btn">En savoir plus...</a>
                 </div>
@@ -95,8 +100,8 @@
                 </div>
             </div>
         </div>
-        <button class="nav prev" onclick="changeSlide(-1)"><img src="images/rA.png" width="90%" alt="" ></button>
-        <button class="nav next" onclick="changeSlide(1)"><img src="images/lA.png" width="90%" alt="" ></button>
+        <button class="nav prev" onclick="changeSlide(-1)"><img src="images/lA.png" width="90%" alt="" ></button>
+        <button class="nav next" onclick="changeSlide(1)"><img src="images/rA.png" width="90%" alt="" ></button>
         <div class="dots">
             <span class="dot active" onclick="goToSlide(0)"></span>
             <span class="dot" onclick="goToSlide(1)"></span>
@@ -104,21 +109,23 @@
         </div>
     </div>
 
-    
-     <div class="provi" style="display: flex; justify-content: center; align-items: center;">
+     <div class="provi">
         <div id="texte">
             <h3 class="titre">Quelques mots du proviseur</h3><hr width="50%">
             <h4>
-                Chèr(e) visiteur,<br>
-                En ma qualité de proviseur, j’ai le plaisir de vous souhaiter la bienvenue sur le site web du Lycée Blingue d'Ekounou(LYBEK).
-                Le LYBEK est un pôle d’Excellence polytechnique au service du développement local, national et sous régional. 
-                Il a pour missions spécifiques d’assurer : La formation de ses élèves et le suivi dans le cursus extra-scolaire
+                Nous croyons que chaque élève porte en lui un potentiel unique. Notre objetif est de l'éveiller,
+                de le guider et de lui offrir les clés pour bâtir un avenir ambitieux et responsable. Ici, nous formons non seulement des élèves,
+                mais aussi des citoyens éclairés. <br> Au nom du lycée bilingue d'Ekounou, je vous souhaite la bienvenue...
             </h4>
         </div>
-        <img src="images/compte.jpg" height="270px" width="17%" alt="">
+        <img src="images/compte.jpg"alt="">
     </div>
+
+    <div class="dept"></div>
+    <div class="clubs"></div>
+    <div class="photo"></div>
     
     <!--Début du site web.......................-->
-    <script src="JS/index.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

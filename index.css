@@ -1,9 +1,11 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(images/hierarchie.png);
     background-attachment: fixed;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(images/acceuil.png);
     background-size: cover;
+    backdrop-filter: blur(5px);
 }
 /* Loader Styles */
 #loader {
@@ -92,10 +94,11 @@ header img {
     display: block;
 }
 /*propriétés du menu vertical (mode bureau)*/
+.autre{margin-top: -70px; position: sticky; top: 0; z-index: 1500;}
 .sidebar {
-    height: 200vh;
+    height: 100vh;
     width: 220px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -250px;
     background-color: #eb984e;
@@ -139,23 +142,22 @@ header img {
 }
 /*propriétés de la barre verticale des liens*/
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 1500;
 }
 
-
 /*début du slider*/
 .slider {
-    margin-top: 20px;
+    margin-top: 80px;
     position: relative;
     width: 100%;
-    height: 40vw;  
+    height: 80vh;  
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
@@ -249,6 +251,9 @@ header img {
     z-index: 10;
     transition: background 0.2s, color 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav:hover {
     background: #fff;
@@ -280,33 +285,80 @@ header img {
 }
 /*fin du slider*/
 
+/*-------------------------------------ANIMATION-S---------------------------------*/
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+/*---------------------------END ANIMATIONS--------------------------------*/
     
 /*mot de bienvenue du proviseur*/
 .provi{  
     display: flex;
     justify-content: center; /* horizontal */
-    align-items: center;        
-
+    align-items: center;
+    margin-top: 10px;
 }
 #texte{ 
     width: 25%;
     margin-right: 10%;
+    animation: fadeLeft 1s ease-in-out;
 }
 .titre{
     color: #eb984e;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     text-align: center;
 }
 h4{
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: unset;
-    width: 80%; 
 }
-img{ 
+.provi img{ 
+    display: flex;
+    align-items: center;
     justify-content: center;
     border-radius: 25px;
+    height:90%;
+    width:17%; 
+    animation: fadeRight 1s ease-in-out;
 }
 /*fin du mot de bienvenue*/
 
@@ -327,7 +379,6 @@ img{
     }
     .nav img {
         width: 80%;
-        margin-top: 5px;
     }
 }
 @media (max-width:1075px){
@@ -337,39 +388,55 @@ img{
     }
 }
 @media (max-width: 875px) {
-    body{background: url(images/acceuil_mobile.png); background-size: cover;}
-    .desktop-menu { display: none; }
+   .desktop-menu { display: none; }
     .open-btn { display: block; }
     .overlay{display: none;}
     header img{ margin-left: 75%;}
-    .slider {margin-top: 40px;}
-    .provi{margin-top: 10px;}
-    .btn{font-size: 0.5rem; font-weight: normal;}
     #onglet{border-radius: 0;}
-    #texte{ width: 50%;}
-    .titre{font-size: 2.7vw; font-weight: bold;}
-    h4{font-size: 2vw;}
-    .provi img{
-        height: 130px;
-        width: 30%;
-        border-radius: 15px;
-    }
+
+/*début du slider*/
     .dot {
         width: 6px;
         height: 6px;
         border: 0.7px solid #fff;
     }
+    .prev{left: 8px;}
+    .next{right: 8px;}
     .dots{bottom: 8px;}
     .nav {
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(255,255,255,0.7);
-        border: none;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+        width: 25px;
+        height: 25px;
     }
+    .slider {margin-top: 110px; height: 300px;}
+    .slide-content h2{font-size: 1.2rem;}
+    .slide-content p{font-size: 0.7rem;}
+    .btn{font-size: 0.5rem; font-weight: unset;}
+/*fin du slider*/
+
+
+/*début du mot de bienvenue*/
+    #texte{ width: 50%;}
+    .titre{font-size: 3vw; font-weight: bold;}
+    h4{font-size: 1.8vw; width: 80%; transform: translateX(15%);}
+    .provi img{
+        height: 130px;
+        width: 150px;
+        border-radius: 15px;
+    }
+/*fin du mot de bienvenue*/
+}
+@media(max-width: 500px){
+    .provi{flex-direction: column;}
+    #texte{margin-right: 0; width: 60%;}
+    .titre{font-size: 4vw;}
+    h4{
+        font-size: 3vw;
+        width: 80%;
+        transform: translateX(10%);
+    }
+
 }
 @media (min-width: 875px) {
     .sidebar, .overlay, .open-btn { display: none; }

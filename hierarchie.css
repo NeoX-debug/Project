@@ -96,7 +96,7 @@ header img {
     display: block;
 }
 /*propriétés du menu vertical (mode bureau)*/
-.autre{position: sticky; top: 0; z-index: 1500;}
+.autre{margin-top: -70px; position: sticky; top: 0; z-index: 1500;}
 .sidebar {
     height: 200vh;
     width: 220px;
@@ -175,34 +175,36 @@ header img {
     transition: 0.2s;
 }
 section{
-    scroll-margin-top: 200px;
-    height: 650px;
+    scroll-margin-top: 220px;
+}
+#titre{
+    display: flex;
+    align-items: center;
+    height: 95px;
+    margin-top: 90px;
 }
 #titre h1{
+    display: flex;
     margin-left: 40px;
-    float: left;
-    color: #a06a3a;
+    color: #eb984e;
     font-size: 2.5vw;
 }
 .categorie{
-    width: 250px;
-    height: 350px;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
-    backdrop-filter: blur(8px);
-    border: 2px solid #eb984e;
-    color: #eb984e;
-    border-radius: 10px;
-    float: left;
-    margin-top: 20px;
-    margin: 10px;
-}
-p{
-    color: #fff;
-    transform: translateX(15px);
+    font-family: sans-serif;
+    width: 230px;
+    height: 330px;
+    display: inline-block;
+    margin: 5px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%);
+    border: 2px solid #b4743d;
+    border-radius: 8px;
+    color: aliceblue;
 }
 .categorie img{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    display: block;
+    margin: 0 auto 5px;
 }
 
 /**adaptation pour les différents écrans*/
@@ -231,7 +233,8 @@ p{
         gap: 10px;
     }
     #sous-menu a{font-size: 70%;margin-left: 0px;}
-    #titre h1{font-size: 5.5vw; margin-top: 50px; text-align: center;}
+    #titre hr{width: 50%;}
+    #titre h1{font-size: 3.5vw;}
     hr{width: 25%;}
     section{
         scroll-margin-top: 170px;

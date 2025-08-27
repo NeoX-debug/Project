@@ -45,60 +45,72 @@
 
     
     <button class="open-btn" onclick="openMenu()">☰ Menu</button>
-    <div class="overlay" onclick="closeMenu()" id="overlay"></div>
-    <div class="sidebar" id="sidebar">
-        <a href="index.html">Accueil</a>
-        <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
-        <div class="submenu" id="submenu1">
-            <a href="dept-info.html">Informatique</a>
-            <a href="#">Mathématiques</a>
-            <a href="dept-pct.html">PCT</a>
-            <a href="dept-fr.html">Français</a>
-            <a href="dept-en.html">Anglais</a>
+    <div class="autre">
+        <div class="overlay" onclick="closeMenu()" id="overlay"></div>
+    </div>
+    <div class="autre">
+        <div class="sidebar" id="sidebar">
+            <a href="index.html">Accueil</a>
+            <a href="#" onclick="toggleSubmenu(event, 'submenu1')">Départements ▼</a>
+            <div class="submenu" id="submenu1">
+                <a href="dept-info.html">Informatique</a>
+                <a href="#">Mathématiques</a>
+                <a href="dept-pct.html">PCT</a>
+                <a href="dept-fr.html">Français</a>
+                <a href="dept-en.html">Anglais</a>
+            </div>
+            <a href="#" onclick="toggleSubmenu(event, 'submenu2')">Enseignements ▼</a>
+            <div class="submenu" id="submenu2">
+                <a href="francophone.html">Francophone</a>
+                <a href="anglophone.html">Anglophone</a>
+            </div>
+                <a href="hierarchie.html">Hiérarchie</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="album.html" id="onglet">Album photo</a>
+                <a href="annonces.html">Annonces</a>
+            </div>
         </div>
-        <a href="#" onclick="toggleSubmenu(event, 'submenu2')">Enseignements ▼</a>
-        <div class="submenu" id="submenu2">
-            <a href="francophone.html">Francophone</a>
-            <a href="anglophone.html">Anglophone</a>
-        </div>
-        <a href="hierarchie.html">Hiérarchie</a>
-        <a href="clubs.html">Clubs</a>
-        <a href="" id="onglet">Album photo</a>
-        <a href="annonces.html">Annonces</a>
     </div>
 
+    <div id="items">
+        <img src="images/lA.png" id="lA" onclick="PreviousImage()" alt="left arrow" srcset="">
+        <span onclick="CloseImages()" id="cross">&#10006;</span>
+        <img src="images/rA.png" id="rA" onclick="NextImage()" alt="right arrow" srcset="">
+    </div>
+
+    <div id="overlay2"></div>
 
     <div id="titre" style="display: flex;">
         <h1>Face olympique</h1><hr width="77%" style="margin: auto;">
     </div>
-    <div id="photo" style="text-align: center; width: 100%;">
-        <img src="pc wallpapers 4k/-5821341975591372171_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372172_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372173_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372176_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372177_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372187_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372189_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372192_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5821341975591372196_121.jpg" width="350px" height="200px" alt="">
+    <div class="photo" id="photo1" style="text-align: center; width: 100%;">
+        <img src="pc wallpapers 4k/-5821341975591372171_121.jpg" onclick="DisplayImage(0, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372172_121.jpg" onclick="DisplayImage(1, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372173_121.jpg" onclick="DisplayImage(2, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372176_121.jpg" onclick="DisplayImage(3, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372177_121.jpg" onclick="DisplayImage(4, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372187_121.jpg" onclick="DisplayImage(5, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372189_121.jpg" onclick="DisplayImage(6, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372192_121.jpg" onclick="DisplayImage(7, 'photo1')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5821341975591372196_121.jpg" onclick="DisplayImage(8, 'photo1')" width="350px" height="200px" alt="">
     </div>
 
     <div id="titre" style="display: flex;">
         <h1>Face culturelle</h1><hr width="80%" style="margin: auto;">
     </div>
-    <div id="photo" style="text-align: center;">
-        <img src="pc wallpapers 4k/-5821341975591372197_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001227_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001230_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001231_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001243_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001244_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001245_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001246_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001250_121.jpg" width="350px" height="200px" alt="">
-        <img src="pc wallpapers 4k/-5830438492986001253_121.jpg" width="350px" height="200px" alt="">
+    <div class="photo" id="photo2" style="text-align: center; width: 100%;">
+        <img src="pc wallpapers 4k/-5821341975591372197_121.jpg" onclick="DisplayImage(0, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001227_121.jpg" onclick="DisplayImage(1, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001230_121.jpg" onclick="DisplayImage(2, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001231_121.jpg" onclick="DisplayImage(3, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001243_121.jpg" onclick="DisplayImage(4, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001244_121.jpg" onclick="DisplayImage(5, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001245_121.jpg" onclick="DisplayImage(6, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001246_121.jpg" onclick="DisplayImage(7, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001250_121.jpg" onclick="DisplayImage(8, 'photo2')" width="350px" height="200px" alt="">
+        <img src="pc wallpapers 4k/-5830438492986001253_121.jpg" onclick="DisplayImage(9, 'photo2')" width="350px" height="200px" alt="">
     </div>
 
-    <script src="JS/file0.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

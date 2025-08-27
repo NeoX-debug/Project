@@ -1,3 +1,1 @@
-This repository was created to make up the LYBEK website. I think I'm a baby Zuckerbeg cuz I stole my friend project to make it up. This website will contain sections like "Home","departments","teaching",'hierarchie","clubs","annoucments" and "photgraph album"
-Hope you guess the content of each section
-See ya
+This repository has been created to make up the LYBEK website. I think this is a great think and an inovation for government high school. This website for a start be a portfolio, a website that presents the school in its entirety and if there will be updates like implementation of databases and so all, it will be update
