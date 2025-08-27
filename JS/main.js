@@ -76,36 +76,80 @@ function DisplayImage(index, containerId) {
     items.style.display = "flex";
     
     overlay2.innerHTML = img
+        const img2 = document.querySelector('#overlay2 img');
+        if (img) img2.style.animation = 'fadeUp 0.3s linear';
     return albumContainer
 }
 
 function NextImage() {
-    const albumContainer = document.querySelectorAll(`#photo1 img`);
+    // Trouver le conteneur actif en vérifiant quelle image est actuellement affichée
     const currentSrc = document.querySelector('#overlay2 img').src;
-    const index = [...albumContainer].findIndex(img => img.src === currentSrc);
     
-    const overlay2 = document.getElementById('overlay2');
-    let nextImg = `<img src="${albumContainer[(index + 1)].src}" id="nextOverlayImg">`;
-    overlay2.innerHTML = nextImg;
+    // Trouver dynamiquement tous les conteneurs d'images qui commencent par "photo"
+    const allPhotoContainers = document.querySelectorAll('[id^="photo"]');
+    
+    let albumContainer;
+    
+    // Parcourir tous les conteneurs pour trouver celui qui contient l'image actuelle
+    for (const container of allPhotoContainers) {
+        const images = container.querySelectorAll('img');
+        if ([...images].some(img => img.src === currentSrc)) {
+            albumContainer = images;
+            break;
+        }
+    }
+    
+    // Si aucun conteneur trouvé, utiliser le premier disponible
+    if (!albumContainer && allPhotoContainers.length > 0) {
+        albumContainer = allPhotoContainers[0].querySelectorAll('img');
+    }
 
+    const index = [...albumContainer].findIndex(img => img.src === currentSrc);
+    const overlay2 = document.getElementById('overlay2');
+    
+    // Vérifier si on est à la dernière image
+    if (index < albumContainer.length - 1) {
+        let nextImg = `<img src="${albumContainer[(index + 1)].src}" id="nextOverlayImg">`;
+        overlay2.innerHTML = nextImg;
+        
         const img = document.querySelector('#overlay2 img');
         if (img) img.style.animation = 'fadeLeft 0.3s linear';
+    }
 }
-nextImg(DisplayImage(index, containerId))
 function PreviousImage(){
-    const albumContainer = document.querySelectorAll("#photo1 img");
-    const leftArrow = document.getElementById('lA');
-
+    // Trouver le conteneur actif en vérifiant quelle image est actuellement affichée
     const currentSrc = document.querySelector('#overlay2 img').src;
-    const index = [...albumContainer].findIndex(img => img.src === currentSrc);
-
-    const overlay2 = document.getElementById('overlay2');
-    let nextImg = `<img src="${albumContainer[(index - 1)].src}">`;
-
-    overlay2.innerHTML = nextImg;
     
-    const img = document.querySelector('#overlay2 img');
-    if (img) img.style.animation = 'fadeRight 0.3s linear';
+    // Trouver dynamiquement tous les conteneurs d'images qui commencent par "photo"
+    const allPhotoContainers = document.querySelectorAll('[id^="photo"]');
+    
+    let albumContainer;
+    
+    // Parcourir tous les conteneurs pour trouver celui qui contient l'image actuelle
+    for (const container of allPhotoContainers) {
+        const images = container.querySelectorAll('img');
+        if ([...images].some(img => img.src === currentSrc)) {
+            albumContainer = images;
+            break;
+        }
+    }
+    
+    // Si aucun conteneur trouvé, utiliser le premier disponible
+    if (!albumContainer && allPhotoContainers.length > 0) {
+        albumContainer = allPhotoContainers[0].querySelectorAll('img');
+    }
+
+    const index = [...albumContainer].findIndex(img => img.src === currentSrc);
+    const overlay2 = document.getElementById('overlay2');
+    
+    // Vérifier si on est à la première image
+    if (index > 0) {
+        let nextImg = `<img src="${albumContainer[(index - 1)].src}">`;
+        overlay2.innerHTML = nextImg;
+        
+        const img = document.querySelector('#overlay2 img');
+        if (img) img.style.animation = 'fadeRight 0.3s linear';
+    }
 }
 
 function CloseImages() {
